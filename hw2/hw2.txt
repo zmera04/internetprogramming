@@ -1,0 +1,32 @@
+Zein Mera
+Professor Nathan Hishon
+CISC 3300
+29 January 2024
+
+1. Define structural vs semantic meaning in regard to HTML elements.
+    Structural HTML elements are elements that designers can use to describe both headings and paragraphs. Semantic HTML elements
+    provide extra information about a website, while providing the same visuals as structural elements.
+
+2. Why is it important to use correct html elements when designing web pages?
+    The use of correct HTML elements when designing website is important because of communication and accessibility. Proper use of
+    HTML elements conveys the meaning of a website's content. Proper use of HTML elements also allows for people with disabilities 
+    to access content online. For example, screen readers use semantic elements to determine sentance emphasis when assisting 
+    visually impaired users. Using correct HTML elements, also allows designers to supply information about websites to search 
+    engines, through the use of elements describing the website, and including keywords for search results. 
+
+    he <meta> tag allows you to supply all kinds of information about your web page.
+
+
+3. What are forms in html? What is their purpose? When would you use one?
+    In HTML, forms refer to different elements that allow designers to collect information from users of a website. Their purpose
+    is to allow users to input and submit data in a structured manner. One would use forms whenever data collection, user 
+    interraction, or data submission is required. Examples of forms would be the use of a checkbox, dropdown menus, text boxes, 
+    text input, password input, file upload, submit buttons, etc. 
+
+4. Define and contrast inline vs block elements.
+    Block elements are elements are elements that appear to start on a new line in the browser. Block elements take up the full
+    available width on a window, creating a rectangular representation of information. Inline elements are elements that continue on
+    the same line as adjacent elements. Inline elements only take up the width necessary to display its contents on a window. Inline
+    elements do not force a newline between elements. The difference between these two types of text elements is in the width-used, 
+    and the new lines created between elements. 
+
