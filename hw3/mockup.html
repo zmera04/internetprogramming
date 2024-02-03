@@ -1,0 +1,156 @@
+<!--
+Zein Mera
+Professor Nathan Hishon
+CISC 3300
+5 February 2024
+Homework 3:
+    Mock up of the Fordham Computer Science Department's homepage
+        a. Use correct font, and hexcodes
+        b. Use flexbox for layout
+*/-->
+
+<html>
+    <style>
+       
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+        body{
+            padding: 10px;
+            width: 1200px;
+            margin: auto;
+            font-family: 'Raleway', sans-serif;
+        }
+        div > div{
+            height: fit-content;
+        }
+
+        ul{
+            padding: 0px;
+            list-style-type: none;
+        }
+
+        img{
+            padding: 5px;
+        }
+
+        h4{
+            color: #900028;
+            margin: 5px;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 20px;
+            align-items: baseline;
+        }
+
+        .side-content{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 250px;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .main-content{
+            width: 875px;
+            border-left: 1px solid #e9e9e9;
+            padding: 20px;
+        }
+
+        .red{
+            color: #900028;
+        }
+
+        .fake-link{
+            color: #900028;
+            text-decoration: underline;
+        }
+
+        .side-list{
+            background-color: #e9e9e9;
+            border-left: 1px solid #900028;
+            padding: 10px;
+        }
+
+        .quote{
+            font-size: 20px;
+        }
+
+        .navigation{
+            padding: 5px;
+        }
+
+        .button{
+            background-color: #900028;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+    </style>
+    <body>
+        <div class="container">
+            <div class="side-content"> 
+                <h4> Majors and Minors </h4>
+                <ul class="side-list">
+                    <li> What's Your Passion? </li>
+                    <li>Accelerated Degree Programs </li>
+                </ul>
+                <div class="button"> Majors and Minors </div>
+            </div>
+
+            <div class="main-content">
+                <div class="navigation">
+                    <span>
+                        Home
+                        /
+                        Admission and Aid
+                        /
+                        Undergraduate Admission
+                        /
+                        Majors and Minors
+                        <span class="red">/
+                        Computer Science</span>
+                    </span>
+                    <h1 class="red"> Computer Science </h1>
+                    <ul>
+                        <li>Degree Options: Major, Minor</li>
+                        <li>Locations: Lincoln Center, Rose Hill</li>
+                        <li>Visit the <span class="fake-link"> Computer Science Department</span></li>
+                    </ul>
+
+                    <p class="quote">
+                        Wherever there&rsquo;s a computer, there&rsquo;s a skilled person developing, maintaining, hacking,
+                        advancing or simply using it. Be that person.
+                    </p>
+
+                    <img src="https://www.fordham.edu/media/review/content-assets/migrated/images/iStock_000021097427Medium.jpg"
+                    align="right" width="25%">
+
+                    <p>
+                        It&rsquo;s difficult to imagine life without computers when they&rsquo;re so central to our
+                        information-driven global society. But it&rsquo;s not difficult to imagine the amazing pursuits 
+                        you&rsquo;ll be prepared for with a degree in computer science from Fordham&rsquo;s department of 
+                        Computer and Information Sciences.
+                    </p>
+
+                    <p>
+                        The computer science major emphasizes science and technology, including software design and programming,
+                        computer architecture and functions, and the development of an ability to analyze and solve problems in
+                        using the computer as a tool.
+                    </p>
+
+                    <p>
+                        Get inspired by the classes we offer. Programming. Bioinformatics. Robotics. Video game design.
+                        Cyber security. Networking. Database management. Health and medical informatics.
+                    </p>
+
+                </div> 
+            </div>
+
+        </div>
+    </body>
+</html>

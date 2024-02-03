@@ -1,0 +1,42 @@
+/*
+ * Zein Mera
+ * Professor Nathan Hishon
+ * CISC 3300
+ * 5 February 2024
+ * Homework 3:
+    1. Create a .css file that does the following
+    a. sets all text elements to be color: red;
+    b. set all paragraph elements to be color: blue;
+    c. set an html class called ‘color-class’ and add a declaration for color: purple;
+    d. set an html id called ‘color-id’ and add a declaration for color: green;
+    e. set all children p elements of the color-class to be color: cyan;
+    f. set all descendant span elements of color-class to be color: yellow;
+    g. set all adjacent sibling span elements of color-class to be color: pink;
+    h. set all general sibling div elements of ‘color class’ to be color: navy;
+*/
+
+
+body{
+    color: red;}
+
+p{
+    color: blue;}
+
+.color-class{
+    color: purple;}
+
+#color-id{
+    color: green;}
+
+
+.color-class > p{
+    color: cyan;}
+
+.color-class span{
+    color: yellow;}
+
+.color-class + span{
+    color: pink;}
+
+.color-class ~ div{
+    color: navy;}

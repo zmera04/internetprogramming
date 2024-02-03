@@ -1,0 +1,13 @@
+Zein Mera
+Professor Nathan Hishon
+CISC 3300
+5 February 2024
+Homework 3
+    Compare and contrast margin, padding, and border.
+
+    When using HTML and CSS, every element follows a box model. In this model, the content of an element is wrapped in a padding,
+border, and margin. Padding refers to the space between the content and border of an element. Border refers to the border
+between the padding and the margin. Margin refers to the area outside the border.
+    Both the padding and margin are transparent, and clear a designated space. Adjustments to either attribute results in more 
+clear space between the content of an element and that of another. However, designer can make the border of an element
+visible, and any color. 
