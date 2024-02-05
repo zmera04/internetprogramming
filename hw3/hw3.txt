@@ -3,7 +3,7 @@ Professor Nathan Hishon
 CISC 3300
 5 February 2024
 Homework 3
-    Compare and contrast margin, padding, and border.
+    3. Compare and contrast margin, padding, and border.
 
     When using HTML and CSS, every element follows a box model. In this model, the content of an element is wrapped in a padding,
 border, and margin. Padding refers to the space between the content and border of an element. Border refers to the border
@@ -11,3 +11,23 @@ between the padding and the margin. Margin refers to the area outside the border
     Both the padding and margin are transparent, and clear a designated space. Adjustments to either attribute results in more 
 clear space between the content of an element and that of another. However, designer can make the border of an element
 visible, and any color. 
+
+    4. 4. Define the following flexbox css rules
+        a. display: flex
+        b. flex-direction
+        c. flex-wrap
+        d. justify-content/align-items
+        e. align-content
+    
+    The "display:flex" rule in CSS makes a container a flex container, which means that it will expand to fill available free
+space, or shrink to prevent overflow. Flex containers can be either inline or block, depending the value specified in the CSS rule.
+    Flex-direction is another flexbox property which establishes the main-axis, which determines the direction flex items (children
+of flex containers) are placed in the flex container. The flex-direction property primarily lays out elements in either horizontal
+rows or vertical columns.
+    Flex-wrap alters the default flexbox property which makes flex items try to all fit onto a single line. Flex-wrap allows
+items to wrap around under a line of items as needed. 
+    Justify-content defines alignment of items along the main axis, helping to distribute extra space leftover by other flex items
+regardless of flexibility. It allows some control over the alignment of items when they overflow the line (and wrap). Align-items
+defines flex items are laid out along the cross axis. Align-items is similar to justify-content, except for the cross-axis. 
+    Align-content defines the white=space between items when there is free space on the cross axis. Align-content is similar to
+the justidy-content property, for the cross axis. 
