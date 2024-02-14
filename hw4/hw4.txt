@@ -1,0 +1,37 @@
+Zein Mera
+Professor Nathan Hishon
+CISC 3300
+20 February 2024
+
+1. What is javascript? How does an interpreted programming language differ from a
+compiled language?
+        Javascript is an object-oriented language, which is used to calculate, manipulate, and validate data; update and change
+    HTML and CSS; and to create and control interractive and dynamic features of a website. Javascript is an interpreted language,
+    which differs from a compiled language because instructions from interpreted languages are read and executed by another 
+    program, rather than the machine. Interpreted languages execute intstructions directly and freely, without compiling them
+    into machine-language. 
+
+2. What is the difference between var, let, and const when declaring variables?
+        When declaring variables, the var keyword declares globally-scoped or function-scoped variables, and should only be used when 
+    writing code for older browsers. The let keyword declares block-scoped, local variables, and allow for the values stored in
+    the variable to change. Variables declared with the const keyword are also block-scoped and local, but cannot be changed once
+    initialized. Variables declared with "let" and "const" will be out of scope if accessed outside the block it was declared in.
+
+3. What are anonymous functions? Higher order functions?
+        In Javascript, anonymous functions are functions without names. Anonymous functions can declared either or without the 
+    function keyword; and in the case where they are declared without the function keyword, anonymous functions call themselves. 
+    Normally, anonymous functions cannot be called after initialization. Anonymous functions can be stored in variables, and
+    (in the occasion they are) can be called through the variable. Anonymous functions can also be passed as parameters to other
+    functions. Higher order functions are functions that can accept functions as parameters, and/or return a function. Higher
+    order functions commonly accept anonymous functions as parameters, and anonymous functions can be high-order if they meet
+    the requirements.
+
+4. Define objects in JavaScript and how they are different from objects in more traditional
+OOP languages.
+        Objects in Javascript are similar to variables, except they can contain many different values. Like objects in more
+    traditional OOP languages, objects are composed of properties and methods, serve as containers for data via properties, and
+    facilitate he manipulation and access of that data through function methods. Unlike objects in C++, objects can be initialized
+    in the definition of the object, without the use of methods. An object can be accessed directly through the object name if
+    initalized in the defintion, or accessed through the dot operator. Objects can be stored and accessed through a variable, if
+    declared through the new keyword, similar to the uses of new variables and objects in C++. If ann object is declared in this
+    manner, then its properties and methods can be accessed through the dot operator. 
