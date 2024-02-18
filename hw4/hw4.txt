@@ -12,10 +12,11 @@ compiled language?
     into machine-language. 
 
 2. What is the difference between var, let, and const when declaring variables?
-        When declaring variables, the var keyword declares globally-scoped or function-scoped variables, and should only be used when 
-    writing code for older browsers. The let keyword declares block-scoped, local variables, and allow for the values stored in
-    the variable to change. Variables declared with the const keyword are also block-scoped and local, but cannot be changed once
-    initialized. Variables declared with "let" and "const" will be out of scope if accessed outside the block it was declared in.
+        When declaring variables, the var keyword declares globally-scoped or function-scoped variables, and should only be used 
+    when writing code for older browsers. The let keyword declares block-scoped, local variables, and allow for the values 
+    stored in the variable to change. Variables declared with the const keyword are also block-scoped and local, but cannot
+    be changed oncenitialized. Variables declared with "let" and "const" will be out of scope if accessed outside the block it was
+    declared in.
 
 3. What are anonymous functions? Higher order functions?
         In Javascript, anonymous functions are functions without names. Anonymous functions can declared either or without the 
@@ -30,8 +31,7 @@ compiled language?
 OOP languages.
         Objects in Javascript are similar to variables, except they can contain many different values. Like objects in more
     traditional OOP languages, objects are composed of properties and methods, serve as containers for data via properties, and
-    facilitate he manipulation and access of that data through function methods. Unlike objects in C++, objects can be initialized
-    in the definition of the object, without the use of methods. An object can be accessed directly through the object name if
-    initalized in the defintion, or accessed through the dot operator. Objects can be stored and accessed through a variable, if
-    declared through the new keyword, similar to the uses of new variables and objects in C++. If ann object is declared in this
-    manner, then its properties and methods can be accessed through the dot operator. 
+    facilitate the manipulation and access of that data through function methods. Unlike objects in C++, objects in Javascript do
+    not need pre-defined classes to create instances of an object. Instead, objects in Javascript can be initialized/created
+    in the definition of an object, without the use of constructors. An object can be accessed directly through the object name (if
+    stored in a variable) and properties can be accessed through the dot operator. 
