@@ -1,0 +1,55 @@
+<!--
+Zein Mera
+Professor Hishon
+CISC 3300
+26 February 2024
+
+Do the following:
+    a. add a button with an id, when that button is clicked, change the button’s text
+    b. add a list with several list items, if any list item is clicked, change all list items
+    color to blue
+    c. add a div that contains a second button element. When that button element is
+    clicked, append a paragraph element with some text to the containing div after
+    the second button.
+-->
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $("#button1").click(function(){
+                    $(this).text('Clicked')
+                });
+                $("li").click(function(){
+                    $("li").addClass("blue");
+                });
+                $("#button2").click(function(){
+                    let newContent = "<p> This was made in New York </p>";
+                    $("div").append(newContent)
+                });
+            });
+        </script>
+
+        <style>
+            .blue{
+                color: blue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <button id="button1">Click</button>
+        <ol>
+            <lh> Top 5 Most Populated US States</lh>
+            <li> California </li>
+            <li> Texas </li>
+            <li> Florida </li>
+            <li> New York </li>
+            <li> Pennsylvania </li>
+        </ol>
+        <div>
+            <button id="button2">Click</button>
+        </div>
+    </body>
+</html>
