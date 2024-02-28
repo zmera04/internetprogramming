@@ -1,0 +1,41 @@
+<!--
+    Zein Mera
+    Professor Hishon
+    CISC 3300 
+    23 February 2024
+    5. Grab some data from an api open to the public and make a tiny application out of it,
+        a. can be a html page that shows the weather - https://open-meteo.com/:
+        b. or revisit the pokemon api
+            i. should be different from the set up shown in lecture
+        c. Or find something else, a different public API
+        d. use jquery to make an api call and display data as html elements you create from
+        the response.
+-->
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $('#monsterButton').click(function(){
+                    $.get('https://db.ygoprodeck.com/api/v7/randomcard.php', function(data){
+                        $("#displayMonster").html(`
+                            <div>
+                                    <b> Name: </b> ${data.name} 
+                                    <br>
+                                    <b> Type: </b> ${data.type} 
+                            </div>
+                            <img src='${data.card_images[0].image_url}'>
+                        `)
+                    })
+                })
+            })
+        </script>
+    </head>
+
+    <body>
+        <h1> Yu-Gi-Oh! Cards: </h1>
+        <button id="monsterButton"> Draw! </button>
+        <div id="displayMonster"></div>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!--
+Zein Mera
+Professor Hishon
+CISC 3300
+29 February 2023
+Homework 6
+    1. What is HTTP? What are the different HTTP request methods and how do they differ?
+        HTTP, or the Hypertext Transport Protocol, is used to transmit hypermedia documents, like HTML, between web browsers
+        and web servers. A request is made to a server from the browser, which then waits until it receives a response from
+        the server. Web servers do not keepy any data between two requests, making HTTP a stateless protocol. HTTP methods
+        include “get” which sends a request to the server, “post” which saves data from the website in the server, “put” which
+        replaces code on the website with code from the server, “patch” which edits code, and “delete” which deletes code. 
+
+    2. What is an API? What is JSON?
+        APIs, or Application Programming Interface, enable two software components to communicate with each other using a set of
+        definitions and protocols. APIs are usually between web browsers and web servers. Today, most APIS are shared through
+        JSON, or Javascript Object Notation. JSON is a lightweight format for storing and transporting data. JSON allows for the
+        transfer of text data across a network, allows for the storing of various datatypes as human readable code through
+        arrays and objects. It is perfect for storing temporary data. JSON is used when data is sent form a server to a website,
+        and is easy to understand. JSON can be integrated into Javascript easier, through the use of built-in functions. JSON
+        exists as a string in Javascript, and can be parsed using those built-in functions. 
+
+    3. What is AJAX? What is meant by asynchronous code?
+        AJAX, or Asynchronous Javascript and XML, is a browser built-in XMLHTTPRequest object, and uses Javascript and HTML DOM.
+        The XMLHTTPRequest requests data from a server, and Javascript and HTML display and use the data. AJAX enables a website
+        to update without reloading, send data to a server in the background, and read data from a web server after a page is
+        loaded. Asynchronous programming allows Javascript code to run in the background without blocking the execution of other 
+        code. 
+
+    4. Use jquery to make some requests to our json server:
+        a. Write a get request to request the data from one of the resources.
+        b. Write a post request to add a new resource.
+        c. Write a put request to replace a previous resource.
+-->
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $('#getButton').click(function(){
+                    $.ajax({
+                        url: 'http://localhost:3000/posts',
+                        method: 'GET',
+                        success: function(data){
+                            $('#display').text('GET request successful! \nCheck console.log')
+                            console.log("Data received from server: ", data)
+                        },
+                        error: function(error){
+                            $('display').text('GET request unsuccessful! \nCheck console.log')
+                            console.log("Error in GET request", error)                            
+                        }
+                    })
+                })
+                $('#putButton').click(function(){
+                    $.ajax({
+                        url: 'http://localhost:3000/posts',
+                        method: 'PUT',
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                            id: "3",
+                            title: "yet another title",
+                            views: 300
+                        }),
+                        success: function(data){
+                            $('#display').text('PUT request successful! \nCheck console.log')
+                            console.log("Data sent to server: ", data)
+                        },
+                        error: function(error){
+                            $('#display').text('PUT request unsuccessful! \nCheck console.log')
+                            console.log('Error in PUT request', error)
+                        }
+                    })
+                })
+                $('#postButton').click(function(){
+                    $.ajax({
+                        url: 'http://localhost:3000/profile',
+                        method: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                            name: 'strandedinpittsburgh'
+                        }),
+                        success: function(data){
+                            $('#display').text('POST request successful! \nCheck console.log')
+                            console.log("Data sent to server: ", data)
+                        },
+                        error: function(error){
+                            $('#display').text('POST request unsuccessful! \nCheck console.log')
+                            console.log('Error in POST request', error)
+                        }
+                    })
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <button id="getButton"> Send a get request </button>
+        <br>
+        <button id="putButton"> Send a put request </button>
+        <br>
+        <button id="postButton"> Send a post request </button>
+        <div id="display"></div>
+    </body>
+</html>
+
