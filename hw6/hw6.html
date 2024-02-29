@@ -41,7 +41,8 @@ Homework 6
                 $('#getButton').click(function(){
                     $.ajax({
                         url: 'http://localhost:3000/posts',
-                        method: 'GET',
+                        type: 'GET',
+                        dataType: 'json',
                         success: function(data){
                             $('#display').text('GET request successful! \nCheck console.log')
                             console.log("Data received from server: ", data)
@@ -52,11 +53,11 @@ Homework 6
                         }
                     })
                 })
-                $('#putButton').click(function(){
+                $('#postButton').click(function(){
                     $.ajax({
                         url: 'http://localhost:3000/posts',
-                        method: 'PUT',
-                        contentType: 'application/json',
+                        type: 'POST',
+                        contentType: 'json',
                         data: JSON.stringify({
                             id: "3",
                             title: "yet another title",
@@ -72,11 +73,11 @@ Homework 6
                         }
                     })
                 })
-                $('#postButton').click(function(){
+                $('#putButton').click(function(){
                     $.ajax({
                         url: 'http://localhost:3000/profile',
-                        method: 'POST',
-                        contentType: 'application/json',
+                        type: 'PUT',
+                        contentType: 'json',
                         data: JSON.stringify({
                             name: 'strandedinpittsburgh'
                         }),
@@ -96,9 +97,9 @@ Homework 6
     <body>
         <button id="getButton"> Send a get request </button>
         <br>
-        <button id="putButton"> Send a put request </button>
-        <br>
         <button id="postButton"> Send a post request </button>
+        <br>
+        <button id="putButton"> Send a put request </button>
         <div id="display"></div>
     </body>
 </html>
