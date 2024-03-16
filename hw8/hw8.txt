@@ -1,0 +1,35 @@
+Zein Mera
+Professor Hishon
+CISC 3300
+18 March 2024
+
+1. What does it mean to escape data? How does escaping data help us avoid malicious code?
+    Escaping data removes special meanings to certain key characters in an input, received from a website, in the hopes
+    to prevent that data from being interpreted as executable code. Escaping data would help remove malicious code by
+    changing something like "<script>" which is executable, into "&lt;script&gt;" which is not executable. 
+
+2a. What is REST? What is meant by Statelessness?
+        REST, or REpresentational State Transfer, provides standards for computer systems to communicate with eachother. 
+        RESTful systems are stateless and implementations of the client and server are independent of each other. 
+        separate the concerns of the client and server. Statelessness means that the server does not need to know
+        anything about the what state the client is in, and the client not needing to know what state the server is in.
+
+2b. What is a resource?
+    Resources describe any object, document, or thing that one needs to store and/or send to other places. 
+
+2c. Look at the section on Path design: In a RESTful architecture paradigm what
+would be the proper way to create a path for: (provide URL and HTTP method):
+i. getting a list of users?
+    GET localhost:8888/users
+
+ii. getting a particular user?
+    GET localhost:8888/users/:id
+
+iii. saving a user?
+    POST localhost:8888/users
+
+3. What is a Cookie?
+    Cookies are little pieces of data saved to the browser. Cookies are sent to the browser by the server, which gives the browser permission to the browser to
+    request more data, using that same cookie. Cookies are on the front-end. 
+4. What is a Session?
+    Sessions store information about a user, which is gathered durign a single site visit. Sessions are on the back-end.
